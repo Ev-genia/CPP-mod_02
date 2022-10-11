@@ -6,17 +6,17 @@
 #    By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 11:54:51 by mlarra            #+#    #+#              #
-#    Updated: 2022/10/10 23:54:27 by mlarra           ###   ########.fr        #
+#    Updated: 2022/10/11 19:19:31 by mlarra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	#Zombie
+NAME	=	Fixed
 
-SRCS	=	main.cpp	#Zombie.cpp	newZombie.cpp	randomChump.cpp
+SRCS	=	main.cpp	Fixed.cpp
 
 OBJS	=	${SRCS:.cpp=.o}
 
-HEADER	=	#Zombie.hpp
+HEADER	=	Fixed.hpp
 
 CC		=	clang++
 
