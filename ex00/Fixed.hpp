@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:55:28 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/11 19:08:18 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/12 10:45:35 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ public:
 	// that sets the raw value of the fixed-point number.
 	void	setRawBits( int const raw );
 	// ◦ A copy assignment operator overload.
-	Fixed & operator=(const Fixed &f);
+	Fixed & operator=(const Fixed &rhs);
 };
 
 #endif

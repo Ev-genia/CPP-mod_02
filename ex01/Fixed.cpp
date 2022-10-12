@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:56:51 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/11 20:46:58 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/12 10:52:44 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,12 @@ void	Fixed::setRawBits(int const raw)
 	this->fixed_point_value = raw;
 }
 
-Fixed &	Fixed::operator=(const Fixed &f)
+Fixed &	Fixed::operator=(const Fixed &rhs)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	int	set;
 
-	set = f.getRawBits();
+	set = rhs.getRawBits();
 	setRawBits(set);
 	return (*this);
 }
@@ -72,8 +72,8 @@ float	Fixed::toFloat(void) const
 	return ((float)this->fixed_point_value / (1 << this->number_fractional_bits));
 }
 
-std::ostream & operator<<(std::ostream & o, const Fixed &f)
+std::ostream & operator<<(std::ostream & o, const Fixed &rhs)
 {
-	o << f.toFloat();
+	o << rhs.toFloat();
 	return (o);
 }
