@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:56:51 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/12 17:41:09 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/13 09:55:49 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,16 @@ Fixed::Fixed(const int argInt)
 {
 	// std::cout << "Int constructor called" << std::endl;
 	this->setRawBits(argInt << this->number_fractional_bits);
+	
 }
 
 Fixed::Fixed(const float argFloat)
 {
+	float f = 1 >> this->number_fractional_bits;
 	// std::cout << "Float constructor called" << std::endl;
 	this->setRawBits((int)roundf(argFloat * (1 << this->number_fractional_bits)));
+std::cout << "Fixed(const float argFloat), 1 >> this->number_fractional_bits: " 
+		<< f << std::endl;
 }
 
 int		Fixed::toInt(void) const
